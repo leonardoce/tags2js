@@ -1,4 +1,4 @@
-tag2js
+tags2js
 ======
 
 Tag2js is a simple Python tool to be used with Qooxdoo that reads XML
@@ -134,6 +134,43 @@ generated javascript file.
 
 The `Constructor`, `Destructor` contains code to be included in the generated
 constructor or descructor.
+
+The `Properties` and `Declarations` tags contains code that will be included in
+the properties of the generated Qooxdoo class or directly in the object
+declaration.
+
+Special attributes
+------------------
+
+Special attributes can be put on every Qooxdoo component.
+
+The `addMethod` attribute is the name of the method that will be called to add
+the component to the parent class. It's default value is `add`.
+
+The `addContext` attribute let's you override the parent to which the component
+will be added.
+
+The `layoutParams` attribute value, if present, will be appended to the add
+method call.
+
+The `enclosedIn` attribute is a function call that will pre-elaborate the child
+component before adding it to the parent. This function will return the component
+that will be appended to the parent.
+
+Attribute values
+----------------
+
+When you specify an attribute value `tojs` will insert in the generated
+Javascript file as a quoted string. 
+
+If you want to use the Qooxdoo internationalization features you can prepend
+the string with the `tr:` prefix and your string will be passed to the Qooxdoo
+`tr` function that will translate it using the available resources. You can
+also use the `trc:` prefix, in the form `trc:key|string` that will search
+inside the internationalization resources for the specified key.
+
+When you want to specify something different from strings you can use the
+`json:` or the `js:` prefix that will insert your value without quoting it.
 
 License
 -------
