@@ -1,0 +1,7 @@
+{
+    "aliases": {
+        // ad ex. "TabButton" : "qx.ui.mobile.tabbar.TabButton"
+    },
+    
+    "defaultPackage" : "qx.ui.mobile"
+}
