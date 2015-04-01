@@ -81,7 +81,7 @@ qx.Class.define("mobileHello.page.Login",
 });
 ```
 
-The benefits of the XML description of the GUI components is more evident in
+The benefits of the XML description of the GUI components are more evident in
 complex forms.
 
 Examples
