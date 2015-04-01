@@ -118,6 +118,23 @@ tries to find the component inside the `defaultPackage`.
 Tags2js will write the code that created your components inside the
 `_createComponents` method, that you can call when you think that is useful.
 
+In the XML files the root element represent the root object and `tojs` will
+generate a class that inherits from the one you specified as root element.
+Attributes are components properties.
+
+There are some special entities and some special attributes.
+
+Special entities
+----------------
+
+Special entities can be put only in the root element.
+
+The `Script` entity contains Javascript code to be included inside the
+generated javascript file.
+
+The `Constructor`, `Destructor` contains code to be included in the generated
+constructor or descructor.
+
 License
 -------
 
