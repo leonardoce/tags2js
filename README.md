@@ -89,6 +89,35 @@ Examples
 
 You can find the examples in the "examples" subdirectory of this repository.
 
+Usage
+-----
+
+You need to copy the `tojs.py` file in your project directory and then you must
+create the `tojs_config.json` file following this example:
+
+```javascript
+{
+    "aliases": {
+        "Button": "qx.ui.mobile.form.Button",
+        "Composite": "qx.ui.mobile.container.Composite",
+        "Form": "qx.ui.mobile.form.Form",
+        "Label": "qx.ui.mobile.basic.Label",
+        "NavigationPage": "qx.ui.mobile.page.NavigationPage",
+        "TextField": "qx.ui.mobile.form.TextField",
+        "PasswordField": "qx.ui.mobile.form.PasswordField"
+    },
+    
+    "defaultPackage" : "qx.ui.mobile"
+}
+```
+
+The `aliases` attribute specifies the mapping between tag names and the
+relative Qooxdoo constructor class. When `tojs.py` doesnt's spot a mapping it
+tries to find the component inside the `defaultPackage`.
+
+Tags2js will write the code that created your components inside the
+`_createComponents` method, that you can call when you think that is useful.
+
 License
 -------
 

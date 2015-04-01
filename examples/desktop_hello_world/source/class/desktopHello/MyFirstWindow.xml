@@ -1,0 +1,46 @@
+<Window caption="This is my first Window!" layout="js:new qx.ui.layout.VBox(10)" width="json:400" height="json:200">
+	<Constructor>
+	<![CDATA[
+	this._createComponents();
+	]]>
+	</Constructor>
+
+	<Script>
+	<![CDATA[
+	onButtonExecute: function() {
+		alert("Hi!");
+	},
+
+	onSumChanged: function() {
+		var first = parseInt(this.txtFirst.getValue());
+		var second = parseInt(this.txtSecond.getValue());
+		var sum = first+second;
+
+		if (isNaN(sum)) {
+			this.txtSum.setValue("");
+		} else {
+			this.txtSum.setValue("" + (first + second));
+		}
+	}
+	]]>
+	</Script>
+
+	<Label value="This is a simple window"/>
+
+	<Composite layout="js:new qx.ui.layout.HBox(10)">
+		<Label value="First number here:"/>
+		<TextField id="txtFirst" layoutParams="{flex:1}" onChangeValue="onSumChanged"/>
+	</Composite>
+
+	<Composite layout="js:new qx.ui.layout.HBox(10)">
+		<Label value="Second number here:"/>
+		<TextField id="txtSecond" layoutParams="{flex:1}" onChangeValue="onSumChanged"/>
+	</Composite>
+
+	<Composite layout="js:new qx.ui.layout.HBox(10)">
+		<Label value="Sum:"/>
+		<TextField id="txtSum" layoutParams="{flex:1}" readOnly="json:true"/>
+	</Composite>
+
+	<Button label="Hi!" onExecute="onButtonExecute"/>
+</Window>

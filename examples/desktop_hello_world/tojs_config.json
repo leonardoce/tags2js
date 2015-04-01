@@ -1,0 +1,11 @@
+{
+    "aliases": {
+        "Button": "qx.ui.form.Button",
+        "Composite": "qx.ui.container.Composite",
+        "Label": "qx.ui.basic.Label",
+        "TextField": "qx.ui.form.TextField",
+        "Window": "qx.ui.window.Window"
+    },
+    
+    "defaultPackage" : "qx.ui"
+}
