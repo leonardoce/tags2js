@@ -20,7 +20,7 @@
  * i.e. using deeper namespaces and a corresponding file structure within the 
  * <tt>test</tt> folder.
  */
-qx.Class.define("mobile_hello_world.test.DemoTest",
+qx.Class.define("mobileHello.test.DemoTest",
 {
   extend : qx.dev.unit.TestCase,
 

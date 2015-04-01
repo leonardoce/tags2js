@@ -1,0 +1,16 @@
+<NavigationPage title="Overview" showBackButton="json:true" backButtonText="Back">
+	<Script>
+	<![CDATA[
+	_initialize: function() {
+		this._createComponents();
+	},
+
+	_back : function()
+	{
+		qx.core.Init.getApplication().getRouting().back();
+	}
+	]]>
+	</Script>
+
+	<Label value="Your first app"/>
+</NavigationPage>

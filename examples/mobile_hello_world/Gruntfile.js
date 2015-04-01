@@ -12,10 +12,10 @@ module.exports = function(grunt) {
     },
 
     common: {
-      "APPLICATION" : "mobile_hello_world",
+      "APPLICATION" : "mobileHello",
       "QOOXDOO_PATH" : "../../../qooxdoo-4.1-sdk",
       "LOCALES": ["en"],
-      "QXTHEME": "mobile_hello_world.theme.Theme"
+      "QXTHEME": "mobileHello.theme.Theme"
     }
 
     /*

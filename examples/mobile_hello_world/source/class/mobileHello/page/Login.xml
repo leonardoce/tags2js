@@ -1,0 +1,21 @@
+<NavigationPage title="Login">
+	<Script>
+	<![CDATA[
+	_initialize: function() {
+		this._createComponents();
+	},
+
+	onButtonTap: function() {
+		if (this.__form.validate()) {
+			qx.core.Init.getApplication().getRouting().executeGet("/overview");
+		}
+	}
+	]]>
+	</Script>
+
+	<Form enclosedIn="new qx.ui.mobile.form.renderer.Single" id="__form">
+		<TextField id="user" required="json:true" layoutParams="'Username'"/>
+		<PasswordField id="pwd" required="json:true" layoutParams="'Password'"/>
+	</Form>
+	<Button label="Login" onTap="onButtonTap"/>
+</NavigationPage>

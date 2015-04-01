@@ -3,8 +3,8 @@
   {
     "name" : "mobile_hello_world",
 
-    "summary" : "Custom Application",
-    "description" : "This is a skeleton for a custom application with qooxdoo.",
+    "summary" : "Custom Mobile Application",
+    "description" : "This is a skeleton for a custom mobile application with qooxdoo.",
     
     "homepage" : "http://some.homepage.url/",
 
@@ -17,13 +17,13 @@
       }
     ],
 
-    "version" : "master",
+    "version" : "trunk",
     "qooxdoo-versions": ["4.1"]
   },
   
   "provides" : 
   {
-    "namespace"   : "mobile_hello_world",
+    "namespace"   : "mobileHello",
     "encoding"    : "utf-8",
     "class"       : "source/class",
     "resource"    : "source/resource",

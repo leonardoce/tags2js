@@ -1,0 +1,13 @@
+{
+    "aliases": {
+        "Button": "qx.ui.mobile.form.Button",
+        "Composite": "qx.ui.mobile.container.Composite",
+        "Form": "qx.ui.mobile.form.Form",
+        "Label": "qx.ui.mobile.basic.Label",
+        "NavigationPage": "qx.ui.mobile.page.NavigationPage",
+        "TextField": "qx.ui.mobile.form.TextField",
+        "PasswordField": "qx.ui.mobile.form.PasswordField"
+    },
+    
+    "defaultPackage" : "qx.ui.mobile"
+}
