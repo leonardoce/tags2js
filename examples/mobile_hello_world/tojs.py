@@ -438,6 +438,7 @@ def getTargetClassName(classdir, prefix, sourceFileName):
     # project namespace and the class name
     classNameSplit = className.split(".")
     className = classNameSplit[0]+".gen."+".".join(classNameSplit[1:-1]) + "." + prefix + classNameSplit[-1]
+    className = className.replace("..", ".")
     
     return className
 
