@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 # Author: Leonardo Cecchi <leonardoce@interfree.it>
 # 
 # This is free and unencumbered software released into the public domain.
@@ -92,6 +93,8 @@ def toAttributeValue(s):
         return "this.trc(%s, %s)" % (toJsString(v[0]), toJsString(v[1]))
     elif s[0:5]=="json:":
         return s[5:]        
+    elif s[0:3]=="js:":
+        return s[3:]        
     else:
         return toJsString(s)
 
@@ -386,7 +389,7 @@ class GeneratorConfig(object):
         conf = json.load(f)
         f.close()
         
-        self.defaultPackage = conf["defaultPackage"].encode('ascii','ignore')
+        self.__defaultPkg = conf["defaultPackage"].encode('ascii','ignore')
         
         for name in conf["aliases"]:
             self.__aliases[name]=conf["aliases"][name].encode('ascii','ignore')
